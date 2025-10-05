@@ -271,7 +271,7 @@ jobs:
           defconfig="./common/arch/arm64/configs/gki_defconfig"
           
           echo "Applying kernel configurations one by one..."
-          
+          echo "CONFIG_ARM64_VA_BITS_48=y" >> "$defconfig"
           # KernelSU Core Configuration
           echo "CONFIG_KSU=y" >> "$defconfig"
           echo "CONFIG_KSU_KPROBES_HOOK=n" >> "$defconfig"
